@@ -1,0 +1,11 @@
+.galContainer{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding:5px;
+}
+
+
+.imgContainer{
+	padding:5px;
+}
