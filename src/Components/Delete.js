@@ -6,25 +6,12 @@ class Delete extends React.Component {
         this.state={
             loading: false
         }
-        // this.handleselectedFile = this.getRestaurants.bind(this);
     }
     componentDidMount() {
         this.setState({loading: true});
-        alert("The image is deleted");
+        console.log("The image is loaded");
     }
 
-// deleteImg(e)
-// {
-// 	var array = [this.state.d];
-// 	var index = array.indexOf(e.target.value);
-// 	if(index !== -1)
-// 	{
-// 		array.splice(index,1)
-// 	}
-// 	this.setState({
-// 		d:array
-// 	})
-// }
     render() {
         return (
             <div >
