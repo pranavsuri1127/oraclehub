@@ -51,7 +51,7 @@
 .imgContainer img{
   max-width: 100%;
   /* max-height: 100%; */
-  height: auto;
+  /* height: auto; */
   /* width: auto; */
 }
 .remove-image {
@@ -89,6 +89,11 @@ right: -11px;
   display: inline-block;
   /* border-bottom: 1px dotted black; */
 }
+.tooltip > input {
+  visibility:hidden;
+  width:0;
+  height:0
+}
 
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -110,9 +115,9 @@ right: -11px;
 }
 
 
-.add {
+/* .add {
   text-align: right;
-}
+} */
 
 .add > div {
   width: 25px;
@@ -163,8 +168,9 @@ right: -11px;
 
 .main{
 	display:flex;
-	justify-content: center;
-	height: 7vh;
+  justify-content: center;
+  z-index: 1;
+	/* height: 7vh; */
 	border-bottom: 1px solid black;
 	position: sticky;
 	top:0;
