@@ -12,7 +12,7 @@ class Gallery extends React.Component {
 	}
 	componentDidMount() {
 		this.setState({loading: true});
-		alert("The image is deleted");
+		console.log("The image is deleted");
 	}	
 	render() {
 		const { images } = this.props
