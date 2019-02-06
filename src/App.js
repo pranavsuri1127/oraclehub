@@ -27,25 +27,27 @@ class App extends Component {
     })
   }
 
-  hubChange = (event) => {
-    console.log(event.target.value);
-    var hubval = event.target.value;
-    fetch('http://localhost:3001/images/'+hubval).then(res=>res.json()).then(data=>{
-      console.log(data)
-      this.setState({
-        d:data,
-        hval: hubval,
-        loaded: 0
-      })
-    });
-  }
+  // hubChange = (event) => {
+  //   console.log(event.target.value);
+  //   var hubval = event.target.value;
+  //   fetch('http://localhost:3001/images/'+hubval).then(res=>res.json()).then(data=>{
+  //     console.log(data)
+  //     this.setState({
+  //       d:data,
+  //       hval: hubval,
+  //       loaded: 0
+  //     })
+  //   });
+  // }
 
   render() {
     return (
       <div >
-        <Navigation hubChangeval={this.hubChange}/>
-        <Add hubid={this.state.hval}/>
-        <Gallery images={this.state.d}/>
+        <Navigation />
+        <div className="container">
+          <Gallery images={this.state.d} />
+          <Add hubid={this.state.hval}/>
+        </div>
       </div>
     );
   }
