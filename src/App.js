@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Navigation from './Components/Navigation';
 import Gallery from './Components/Gallery';
-import Add from './Components/Add';
 
 class App extends Component {
   constructor(){
@@ -21,32 +20,17 @@ class App extends Component {
       this.setState({
         d:data,
         hval: 'hub1',
-        loaded: 0
-      })
-      
+      });      
     })
   }
 
-  // hubChange = (event) => {
-  //   console.log(event.target.value);
-  //   var hubval = event.target.value;
-  //   fetch('http://localhost:3001/images/'+hubval).then(res=>res.json()).then(data=>{
-  //     console.log(data)
-  //     this.setState({
-  //       d:data,
-  //       hval: hubval,
-  //       loaded: 0
-  //     })
-  //   });
-  // }
-
   render() {
     return (
-      <div >
+      <div>        
         <Navigation />
-        <div className="container">
+        <div className="container outercontainer">
+          <h1 className="outergalContainer">Admin for Digital Signage</h1>
           <Gallery images={this.state.d} />
-          <Add hubid={this.state.hval}/>
         </div>
       </div>
     );

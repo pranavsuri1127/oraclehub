@@ -17,20 +17,16 @@ class Add extends React.Component {
     render() {
         const { hubid } = this.props;
         return(
-            <form id='uploadForm' action={'http://localhost:3001/upload/'+hubid} method='post' encType="multipart/form-data">
-                <div className="tooltip">
-                    <div className="tooltiptext">Add Images</div>
-                    <label htmlFor="file-input">
-                        <div className="add">
-                            <div id="parent">
-                                <div id="div1"></div>
-                                <div id="div2"></div>
-                            </div>
-                        </div>
-                    </label>
-                    <input id="file-input" type="file" name="sampleFile" onChange={this.submitForm} />     
-                </div>    
-            </form>                 
+            <div className="container">
+                <form id='uploadForm' action={'http://localhost:3001/upload/'+hubid} method='post' encType="multipart/form-data">
+                    <h3>Add Images</h3>
+                    <div className="file-upload btn btn-primary">
+                        <span>BROWSE</span>
+                        <input type="file" id="FileAttachment" className="upload" name="sampleFile" onChange={this.submitForm}/>
+                    </div><br/>
+                    <input className="outergalContainer" type="text" id="fileuploadurl" readOnly placeholder="Maximum file size is 1GB" />
+                </form>
+            </div>                 
         )
     }
 }

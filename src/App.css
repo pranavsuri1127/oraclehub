@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,18 +38,29 @@
 }
 
 .galContainer{
-  /* display: flex; */
-  display: table-cell;
-	flex-flow: row wrap;
-	justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
   padding:5px;
-    /* width: 100%; */
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 5px;
+  margin: 0 auto;
+  max-width: 50%;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 #root #uploadForm, .outergalContainer{
   /* display: table-cell; */
    text-align: center;
    vertical-align: middle;
+}
+.outergalContainer>.innergalContainer
+{
+  border: solid 1px #333;
+  border-style: dashed;
+  width: 50%;
+  margin: 20px auto;
 }
 .selectContainer{
   padding: 20px 0;
@@ -64,12 +75,14 @@
 .imgContainer{
   padding: 5px;
   position: relative;
-  background: #333;
+  /* background: #333; */
   display: inline-block;
-  top: 50%;
-  left: 50%;
+  /* top: 50%;
+  left: 50%; */
+  margin: 15px;
 }
 .imgContainer img{
+  border: #333 solid 1px;
   max-width: 100%;
   /* max-height: 100%; */
   /* height: auto; */
@@ -77,10 +90,10 @@
 }
 .remove-image {
 /* display: none; */
-margin: 10px;
+margin: -15px;
 position: absolute;
-top: -10px;
-right: -10px;
+/* top: -10px;
+right: -10px; */
 border-radius: 10em;
 padding: 2px 6px 3px;
 text-decoration: none;
@@ -223,4 +236,71 @@ right: -11px;
 }
 .paddings{
   width: 100%;
+}
+
+body{
+  background:#f1f1f1;
+}
+
+h1{
+  margin-bottom: 40px;;
+}
+
+.file-upload {
+	position: relative;
+	overflow: hidden;
+
+	border-radius: 3px !important;
+	background: #ff0000;
+	text-transform: uppercase;
+	font-size: 13px;
+	border:none !important;
+	box-shadow: none !important;
+	color: #fff !important;
+	text-shadow:none;
+	padding: 5px 10px !important;
+	font-family: Arial, sans-serif;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+.file-upload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+#fileuploadurl{
+	display: inline-block;
+	border:none;
+	vertical-align: middle;
+	background: none;
+	box-shadow: none;
+	font-size: 11px;
+	padding-left: 20px;
+  width:220px;
+	padding-right: 0;
+}
+
+.container {
+  width: 70%;
+  padding: 50px 20px;
+  background: #fff;
+  margin: 0 auto;
+  /* width:400px; */
+}
+
+.outercontainer{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-top: 4%;
+}
+
+.outercontainer:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
