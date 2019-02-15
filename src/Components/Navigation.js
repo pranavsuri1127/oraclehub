@@ -9,10 +9,7 @@ class Navigation extends React.Component {
 				<div className="adjust">
 					<img alt="Oracle Logo" src={logo} />
 				</div>
-				<div className="paddings"></div>
-				<div className="adjust">
-					<h4><a href=".">Gallery</a></h4>
-				</div>
+				<div className="oraclelogotext">Digital Signage</div>
 			</nav>
 		)
 	}

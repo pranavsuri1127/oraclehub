@@ -14,7 +14,7 @@ class Gallery extends React.Component {
   }
 	deleteImg = (event) => {
 		console.log(event.target.id);
-		fetch('http://localhost:3001/delete/'+event.target.id,{method: 'DELETE'}).then(res=>res.json())
+		fetch('http://solutionengineering-devops.us.oracle.com:3002/delete/'+event.target.id,{method: 'DELETE'}).then(res=>res.json())
 		.then(data=>{
 		  alert(data);
 		})
@@ -22,7 +22,7 @@ class Gallery extends React.Component {
 	hubChange = (event) => {
     console.log(event.target.value);
     var hubval = event.target.value;
-    fetch('http://localhost:3001/images/'+hubval).then(res=>res.json()).then(data=>{
+    fetch('http://solutionengineering-devops.us.oracle.com:3002/images/'+hubval).then(res=>res.json()).then(data=>{
       console.log(data)
       this.setState({
         d:data,
@@ -37,7 +37,7 @@ class Gallery extends React.Component {
   }
 	componentDidMount() {
 		console.log("The image is loaded");
-		fetch('http://localhost:3001/images/hub1').then(res=>res.json())
+		fetch('http://solutionengineering-devops.us.oracle.com:3002/images/hub1').then(res=>res.json())
     .then(data=>{
       console.log(data)
       this.setState({
@@ -56,16 +56,12 @@ class Gallery extends React.Component {
 					<Add hubid={this.state.hval}/>
 				</div>
 				<div className="galContainer">
-				{
-					<div>
 					{this.state.d.map((item,i) => (
 						<div key={i} className="imgContainer">
 							<img id={item.IMG_ID} src={item.CONTENT} alt="Hub Images" height="150px" />
 							<button id={item.IMG_ID} className="remove-image" styles="display: inline;" onClick={this.deleteImg}>&#215;</button>
 						</div>
 					))}
-						</div>
-				}
 				</div>
 			</div>
 		)
