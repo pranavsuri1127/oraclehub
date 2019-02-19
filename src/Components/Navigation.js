@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.png';
+import logout from './logout.png';
 
 class Navigation extends React.Component {
 	render() {
@@ -10,6 +11,11 @@ class Navigation extends React.Component {
 					<img alt="Oracle Logo" src={logo} />
 				</div>
 				<div className="oraclelogotext">Digital Signage</div>
+				<div className="adjust">
+					<a href="https://apex.oraclecorp.com/pls/apex/f?p=10841:2">
+						<img className="logout" alt="Logout" src={logout} />
+					</a>
+				</div>
 			</nav>
 		)
 	}
