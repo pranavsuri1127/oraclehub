@@ -4,16 +4,15 @@ import logout from './logout.png';
 
 class Navigation extends React.Component {
 	render() {
-		// const { hubChangeval } = this.props;
 		return (
 			<nav className="main" >
 				<div className="adjust">
 					<img alt="Oracle Logo" src={logo} />
 				</div>
 				<div className="oraclelogotext">Digital Signage</div>
-				<div className="adjust">
+				<div className="logout">
 					<a href="https://apex.oraclecorp.com/pls/apex/f?p=10841:2">
-						<img className="logout" alt="Logout" src={logout} />
+						<img alt="Logout" title="Logout" src={logout} />
 					</a>
 				</div>
 			</nav>

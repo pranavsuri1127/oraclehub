@@ -16,7 +16,8 @@ class Gallery extends React.Component {
 		console.log(event.target.id);
 		fetch('http://solutionengineering-devops.us.oracle.com:3002/delete/'+event.target.id,{method: 'DELETE'}).then(res=>res.json())
 		.then(data=>{
-		  alert(data);
+			alert(data);
+			window.location.reload();
 		})
 	}
 	hubChange = (event) => {

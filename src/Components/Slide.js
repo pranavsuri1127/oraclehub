@@ -6,15 +6,9 @@ class Slide extends React.Component {
     constructor(){
         super();
         this.state={
-            allimg:[],
-            isFull: false
+            allimg:[]
         }
     }
-    // goFull = () => {
-    //     this.setState({ isFull: true });
-    //     window.open(window.location.href, '', 'fullscreen=yes, scrollbars=auto');
-    //     document.documentElement.webkitRequestFullScreen();
-    // }
     componentWillMount(){
         fetch('http://solutionengineering-devops.us.oracle.com:3002/allimages').then(res=>res.json()).then(data=>{
             console.log(data)
@@ -23,15 +17,6 @@ class Slide extends React.Component {
             });
         })
     }
-    // componentDidMount(){
-    //     document.onreadystatechange = function () {
-    //         if (document.readyState === 'complete') {
-    //             if (!document.fullscreenElement) {
-    //                 document.documentElement.requestFullscreen();
-    //             }
-    //         }
-    //     }
-    // }
     render() {
         return (
             <div>

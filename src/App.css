@@ -203,8 +203,8 @@ right: -11px;
   white-space: nowrap;
   font-size: 14px;
 }
-.adjust>.logout{
-  margin: auto 0 auto auto;
+.logout{
+  margin: auto 16px auto auto;
 }
 .adjust > img {
   height: 20px;

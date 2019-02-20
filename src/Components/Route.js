@@ -26,7 +26,7 @@ const Home = () => (
 );
 
 const Slides = () => (
-  <div>
+  <div id="sliderview">
     <Slide/>
   </div>
 )
