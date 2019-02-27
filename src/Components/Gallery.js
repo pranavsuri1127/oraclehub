@@ -30,10 +30,6 @@ class Gallery extends React.Component {
         hval: hubval,
         loaded: 0
 			})
-			const images = this.state.d;
-			this.props.images.forEach(item => {
-				images.push({'id': item.IMG_ID, 'content': item.CONTENT});
-		 });
     });
   }
 	componentDidMount() {
